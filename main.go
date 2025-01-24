@@ -64,9 +64,6 @@ func fetchLast10Lines() ([]string, error) {
 }
 
 func main() {
-	//for {
-	//fmt.Println("Fetching last 10 lines from mirror.log...")
-
 	lines, err := fetchLast10Lines()
 	if err != nil {
 		fmt.Println("Error fetching logs:", err)
@@ -82,8 +79,4 @@ func main() {
 		fmt.Println("No logs found.")
 	}
 
-	// Wait for 1 minute before fetching logs again
-	//fmt.Println("Waiting for 1 minute before the next update...")
-	//time.Sleep(30 * time.Second)
-	//}
 }
