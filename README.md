@@ -2,7 +2,7 @@
 simple solution to populating a slack channel with nightly mb status.
 
 ## Development
-* Install Go: (https://go.dev/)[https://go.dev/]
+* Install Go: [https://go.dev/](https://go.dev/)
 
 ## Building
 * For Linux: GOOS=linux GOARCH=amd64 go build -o app.go
