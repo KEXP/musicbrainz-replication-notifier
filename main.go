@@ -5,9 +5,7 @@ import (
 	"bytes"
 	"encoding/json"
 	"fmt"
-	"github.com/joho/godotenv"
 	"net/http"
-	"os"
 	"os/exec"
 	"strings"
 )
@@ -15,27 +13,11 @@ import (
 // Path to the directory where docker-compose.yml is located
 const dockerComposeDir = "/home/techops/musicbrainz-docker/"
 
-// Slack Webhook URL (Replace with your actual URL) if you rather not use a .env
-//const SlackWebhookURL = "PUT THING HERE"
-
-// Load environment variables from .env file
-// ensure you run this prior to running the binary or things won't go as planned:
-// export $(cat .env | xargs)
-func init() {
-	err := godotenv.Load()
-
-	if err != nil {
-		fmt.Println("Warning: No .env file found")
-	}
-}
+// Slack Webhook URL (Replace with your actual URL)
+const slackWebhookURL = "YOUR KEY GOES HERE"
 
 // sendToSlack sends a message to Slack
 func sendToSlack(message string) error {
-	slackWebhookURL := os.Getenv("SLACK_WEBHOOK_URL")
-
-	if slackWebhookURL == "" {
-		return fmt.Errorf("SLACK_WEBHOOK_URL is not set in the environment")
-	}
 
 	payload := map[string]string{"text": message}
 	jsonData, err := json.Marshal(payload)
