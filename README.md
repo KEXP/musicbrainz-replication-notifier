@@ -14,11 +14,7 @@ simple solution to populating a slack channel with nightly mb status.
 Each night our local musicbrainz will attempt to pull down any new entries to their primary database. The result of this is stored in mirror.log. This simply takes the last 10 lines of that file and sends it to slack. A cron job runs this every morning at 8am PST.
 
 ## To Run
-Make sure to add the webhook needed in main.go where called out.
-
-2. export this to your local environment:
-export $(cat .env | xargs)
-
-3. ./app.go
-
-4. yep.
+1, Make sure to add the webhook needed in main.go where called out.
+2. ./app.go
+3. ???
+4. PROFIT
