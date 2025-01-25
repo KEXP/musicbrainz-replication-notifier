@@ -3,7 +3,7 @@ simple solution to populating a slack channel with nightly mb status.
 
 ## Development
 * Install Go: [https://go.dev/](https://go.dev/)
-* Install godotenv: [go get github.com/joho/godotenv](go get github.com/joho/godotenv)
+* Install godotenv: ```go get github.com/joho/godotenv```
 
 ## Building
 * For Linux: GOOS=linux GOARCH=amd64 go build -o app.go
