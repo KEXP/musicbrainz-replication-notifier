@@ -3,9 +3,10 @@ simple solution to populating a slack channel with nightly mb status.
 
 ## Development
 * Install Go: [https://go.dev/](https://go.dev/)
+* Get slack webhook url
 
 ## Building
-Make sure to add the webhook needed in main.go where called out before building...
+Make sure to add the webhook url needed in main.go where called out before building...
 * For Linux: ```GOOS=linux GOARCH=amd64 go build -o app.go```
 * For Windows: ```GOOS=windows GOARCH=amd64 app.go```
 * For Intel Mac: ```GOOS=darwin GOARCH=amd64 go build -o app.go```
