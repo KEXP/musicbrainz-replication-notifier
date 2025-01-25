@@ -15,6 +15,9 @@ Each night our local musicbrainz will attempt to pull down any new entries to th
 
 ## To Run
 1, Make sure to add the webhook needed in main.go where called out.
+
 2. ./app.go
+
 3. ???
+
 4. PROFIT
